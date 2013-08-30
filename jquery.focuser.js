@@ -66,7 +66,7 @@ function focusOn(id, scroll, offset) {
     'box-shadow': 'none'
   });
   // Bring the desired panel div into focus
-  $('div.panel#' + id).css({
+  $('#' + id).css({
     'z-index': '999',
     'position': 'relative',
     '-webkit-box-shadow': '0px 0px 30px rgba(0, 0, 0, 0.32)',
@@ -74,20 +74,22 @@ function focusOn(id, scroll, offset) {
     'box-shadow': '0px 0px 30px rgba(0, 0, 0, 0.32)'
   });
   // RELEASE THE UNDERLAY
-  if (!$('#modal-underlay').length) {
-    $('body').append('<div id="modal-underlay" onclick="closeBg(\''+id+'\');" style="  display: none; width: 100%; height: 100%; background: #000; position: fixed; top: 0; left: 0; z-index: 998;"></div>');
-    $('#modal-underlay').height( $('html').outerHeight() ).fadeTo(100, 0.5);
+  if (!$('#focus-underlay').length) {
+    $('body').append('<div id="focus-underlay" onclick="closeBg(\''+id+'\');" style="  display: none; width: 100%; height: 100%; background: #000; position: fixed; top: 0; left: 0; z-index: 998;"></div>');
+    $('#focus-underlay').height( $('html').outerHeight() ).fadeTo(100, 0.5);
+  } else {
+    $('#focus-underlay').attr('onclick', 'closeBg(\''+id+'\');');
   }
 }
 
 function closeBg(id) {
   $ = jQuery;
   // Kill the underlay
-  $('#modal-underlay').fadeOut(100, function() {
-    $('#modal-underlay').remove();
+  $('#focus-underlay').fadeOut(100, function() {
+    $('#focus-underlay').remove();
   });
   // Reset our target panel
-  $('div.panel#' + id).css({
+  $('#' + id).css({
     'z-index': '0',
     'position': 'static',
     '-webkit-box-shadow': 'none',
