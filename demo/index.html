@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A jQuery plugin that allows you to focus in on one element on your page by darkening the background around it.">
+    <meta name="author" content="Kraig Hufstedler">
+
+    <title>jQuery Focuser - Kraig Hufstedler</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <a href="https://github.com/kraigh/jquery-focuser"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+
+    <div class="container">
+
+      <div class="top-bits">
+        <h1>jQuery Focuser</h1>
+        <a class="btn btn-primary btn-lg" href="https://github.com/kraigh/jquery-focuser"><i class="icon-github icon-lg"></i> GitHub</a>
+        <a class="btn btn-primary btn-lg" href="https://github.com/kraigh/jquery-focuser/archive/master.zip"><i class="icon-download-alt icon-lg"></i> Download .zip</a>
+      </div>
+
+    </div><!-- /.container -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="panel" id="what">
+            <h2>What?</h2>
+            <p>Focuser is a simple jquery plugin that lets you highlight a specific div (or any element, really) by fading the background around it. This works best when you are trying to highlight content on your page, and was designed to work with "panel" type elements, such as the ones on this page.</p>
+            <p>The focus state will be canceled after scrolling more than 3 pixels, or after clicking on the background. Clicking another 'focus' link while in a focus state will switch seamlessly to the new target element.</p>
+            <button type="button" class="btn btn-link focus" data-focus-id="what">Focus on me!</button>
+            <br>
+            <button type="button" class="btn btn-link focus" data-focus-id="scrolling">I can also scroll!</button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="panel" id="scrolling">
+            <h2>Scrolling?</h2>
+            <p>Focuser can also scroll to your focused content, using the <a href="https://github.com/kswedberg/jquery-smooth-scroll">jquery-smooth-scroll</a> plugin. Just include jquery.smooth-scroll.js on your page (before jquery.focuser.js) and add the class <code>scroll</code> to any links that you want to scroll.</p>
+            <p>By default, the scroll will end 10 pixels above the content. You can customize this by adding the <code>data-scroll-offset</code> attribute to your link. Ex:</p>
+            <pre>&lt;a href="javascript:; class="focus scroll" data-focus-id="targetId" data-scroll-offset="-60"&gt;Focus 20px above!&lt;/a&gt;</pre>
+            <button type="button" class="btn btn-link focus scroll" data-focus-id="target-1">Take me to #1!</button>
+            <br>
+            <button type="button" class="btn btn-link focus scroll" data-focus-id="target-1" data-scroll-offset="-60">Take me 60px above #1!</button>
+            <br>
+            <button type="button" class="btn btn-link focus scroll" data-focus-id="target-2">Take me to #2!</button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="panel" id="how">
+            <h2>How?</h2>
+            <p>To use Focuser, just include <code>jquery.focuser.js</code> on your page and make a link like this:</p>
+            <pre>&lt;a href="javascript:; class="focus" data-focus-id="targetId"&gt;Focus!&lt;/a&gt;</pre>
+            <p>You can even use a button:</p>
+            <pre>&lt;button type="button" class="focus" data-focus-id="targetId"&gt;Focus!&lt;/button&gt;</pre>
+            <p>The plugin can also be called via javascript. The <code>id</code> parameter is required, while <code>scroll</code> and <code>offset</code> are not.</p>
+            <pre>focusOn(id, scroll, offset);</pre>
+          </div>
+        </div>
+      </div> <!-- /.row -->
+      <div class="row">
+        <div class="col-md-2 col-md-offset-5">
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+        </div> <!-- /.col -->
+      </div> <!-- /.row -->
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="panel" id="target-1">
+            <h2>Scroll Target 1</h2>
+            <h4>Enjoy some <a href="http://hipsteripsum.me/">Hipster Ipsum</a></h4>
+            <p>Ethnic Portland bespoke master cleanse mollit. Nesciunt Portland Pitchfork, ex nulla meggings gluten-free Carles anim Wes Anderson tempor hoodie Thundercats. Biodiesel accusamus shabby chic Helvetica. Synth fugiat whatever Cosby sweater consectetur nesciunt, yr Carles. Authentic craft beer voluptate, literally four loko gastropub quis DIY ethnic sed sapiente VHS cupidatat aute. Before they sold out irure odio craft beer. Do blog retro brunch ut selfies, iPhone tempor commodo seitan craft beer excepteur hoodie.</p>
+            <p>Terry Richardson qui farm-to-table biodiesel, pug eu adipisicing cillum ugh flannel photo booth. Banjo proident commodo, shabby chic cliche veniam Neutra PBR fingerstache id adipisicing minim bicycle rights incididunt enim. Roof party street art quinoa, cornhole esse literally farm-to-table readymade disrupt mixtape dreamcatcher Pinterest. Chia Helvetica gentrify non, kale chips DIY selfies trust fund. Nostrud literally cornhole farm-to-table pour-over, paleo pop-up disrupt chambray fingerstache proident sustainable Helvetica umami. Tote bag distillery synth, salvia sed sint raw denim Etsy cliche vinyl veniam nisi VHS sustainable labore. Master cleanse scenester labore jean shorts delectus.</p>
+            <button type="button" class="btn btn-link focus scroll" data-focus-id="scrolling">To the top!</button>
+            <br>
+            <button type="button" class="btn btn-link focus scroll" data-focus-id="target-2">Take me to #2!</button>
+          </div> <!-- /.panel -->
+        </div> <!-- /.col -->
+      </div> <!-- /.row -->
+      <div class="row">
+        <div class="col-md-2 col-md-offset-5">
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+          <i class="icon-double-angle-down icon-4x"></i>
+        </div> <!-- /.col -->
+      </div> <!-- /.row -->
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="panel" id="target-2">
+            <h2>Scroll Target 2</h2>
+            <h4>Enjoy some <a href="http://placekitten.com/">placekittens</a></h4>
+              <div class="kitties">
+                <img src="http://placekitten.com/g/300/300">
+                <img src="http://placekitten.com/g/400/300">
+                <img src="http://placekitten.com/g/200/300">
+                <br>
+                <img src="http://placekitten.com/g/300/200">
+                <img src="http://placekitten.com/g/400/200">
+                <img src="http://placekitten.com/g/200/200">
+              </div>
+            <button type="button" class="btn btn-link focus scroll" data-focus-id="scrolling">To the top!</button>
+            <br>
+            <button type="button" class="btn btn-link focus scroll" data-focus-id="target-1">Take me to #1!</button>
+          </div> <!-- /.panel -->
+        </div> <!-- /.col -->
+      </div> <!-- /.row -->
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="js/jquery.smooth-scroll.min.js"></script>
+    <script src="js/jquery.focuser.js"></script>
+  </body>
+</html>
