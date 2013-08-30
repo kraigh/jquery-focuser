@@ -64,11 +64,12 @@
             <p>Focuser can also scroll to your focused content, using the <a href="https://github.com/kswedberg/jquery-smooth-scroll">jquery-smooth-scroll</a> plugin. Just include jquery.smooth-scroll.js on your page (before jquery.focuser.js) and add the class <code>scroll</code> to any links that you want to scroll.</p>
             <p>By default, the scroll will end 10 pixels above the content. You can customize this by adding the <code>data-scroll-offset</code> attribute to your link. Ex:</p>
             <pre>&lt;a href="javascript:; class="focus scroll" data-focus-id="targetId" data-scroll-offset="-60"&gt;Focus 20px above!&lt;/a&gt;</pre>
-            <button type="button" class="btn btn-link focus scroll" data-focus-id="target-1">Take me to #1!</button>
+            <button type="button" class="btn btn-link focus scroll" data-focus-id="target-1">Take me to content!</button>
             <br>
-            <button type="button" class="btn btn-link focus scroll" data-focus-id="target-1" data-scroll-offset="-60">Take me 60px above #1!</button>
+            <button type="button" class="btn btn-link focus scroll" data-focus-id="target-1" data-scroll-offset="-60">Take me 60px above content!</button>
             <br>
-            <button type="button" class="btn btn-link focus scroll" data-focus-id="target-2">Take me to #2!</button>
+            <button type="button" class="btn btn-link focus scroll" data-focus-id="target-2">Take me to kittens!</button>
+            <button type="button" class="btn btn-link focus scroll" data-focus-id="how">How does work?</button>
           </div>
         </div>
         <div class="col-md-4">
@@ -128,7 +129,7 @@
             <p>Terry Richardson qui farm-to-table biodiesel, pug eu adipisicing cillum ugh flannel photo booth. Banjo proident commodo, shabby chic cliche veniam Neutra PBR fingerstache id adipisicing minim bicycle rights incididunt enim. Roof party street art quinoa, cornhole esse literally farm-to-table readymade disrupt mixtape dreamcatcher Pinterest. Chia Helvetica gentrify non, kale chips DIY selfies trust fund. Nostrud literally cornhole farm-to-table pour-over, paleo pop-up disrupt chambray fingerstache proident sustainable Helvetica umami. Tote bag distillery synth, salvia sed sint raw denim Etsy cliche vinyl veniam nisi VHS sustainable labore. Master cleanse scenester labore jean shorts delectus.</p>
             <button type="button" class="btn btn-link focus scroll" data-focus-id="scrolling">To the top!</button>
             <br>
-            <button type="button" class="btn btn-link focus scroll" data-focus-id="target-2">Take me to #2!</button>
+            <button type="button" class="btn btn-link focus scroll" data-focus-id="target-2">Take me to kittens!</button>
           </div> <!-- /.panel -->
         </div> <!-- /.col -->
       </div> <!-- /.row -->
@@ -183,8 +184,6 @@
                 <img src="http://placekitten.com/g/200/200">
               </div>
             <button type="button" class="btn btn-link focus scroll" data-focus-id="scrolling">To the top!</button>
-            <br>
-            <button type="button" class="btn btn-link focus scroll" data-focus-id="target-1">Take me to #1!</button>
           </div> <!-- /.panel -->
         </div> <!-- /.col -->
       </div> <!-- /.row -->
@@ -193,6 +192,6 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <script src="js/jquery.smooth-scroll.min.js"></script>
-    <script src="../jquery.focuser.js"></script>
+    <script src="jquery.focuser.js"></script>
   </body>
 </html>
