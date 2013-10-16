@@ -1,4 +1,4 @@
-#jquery.focuser.js
+#jquery.focuser.js - [Demo](http://kraigh.github.io/jquery-focuser/)
 
 ##What?
 Focuser is a simple jquery plugin that lets you highlight a specific div (or any element, really) by fading the background around it. This works best when you are trying to highlight content on your page, and was designed to work with "panel" type elements.
@@ -26,4 +26,4 @@ By default, the scroll will end 10 pixels above the content. You can customize t
     <a href="javascript:; class="focus scroll" data-focus-id="targetId" data-scroll-offset="-60">Focus 20px above!</a>
     
 ##Demo.
-View the demo [here](http://https://github.com/kraigh/jquery-focuser) or look at /demo in the repo.
+View the demo [here](http://kraigh.github.io/jquery-focuser/) or look at /demo in the repo.
