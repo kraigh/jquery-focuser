@@ -6,19 +6,16 @@
 
 
   $(document).on('click', '.focus', function(){
+    var scroll = false;
+    var offset = offsetDefault;
     var id = $(this).attr('data-focus-id');
     // Check for the scroll class and set the variable accordingly.
     if ($(this).hasClass('scroll')) {
-      var scroll = true;
-    } else {
-      var scroll = false;
+      scroll = true;
     }
     // Check for an offset option. If none, set a default.
     if ($(this).attr('data-scroll-offset')) {
-      var offset = parseInt($(this).attr('data-scroll-offset'));
-    } else {
-      // If you would like, you can change this value to adjust the default offset.
-      var offset = offsetDefault;
+      offset = parseInt($(this).attr('data-scroll-offset'), 10);
     }
     focusOn(id, scroll, offset);
   });
@@ -30,7 +27,7 @@ function focusOn(id, scroll, offset) {
   $(window).unbind();
   // Initialize scrolled variable.
   var scrolled = 0;
-  if (scroll == true) {
+  if (scroll === true) {
     // Start scrollin'
     $.smoothScroll({
       scrollElement: null,
@@ -39,7 +36,7 @@ function focusOn(id, scroll, offset) {
       afterScroll: function() {
         $(window).bind("scroll", function() {
           scrolled++;
-          if (scrolled > 3) {
+          if (scrolled > 1) {
             closeBg(id);
             $(window).unbind();
             scrolled = 0;
