@@ -3,7 +3,7 @@
 ##What?
 Focuser is a simple jquery plugin that lets you highlight a specific div (or any element, really) by fading the background around it. This works best when you are trying to highlight content on your page, and was designed to work with "panel" type elements.
 
-The focus state will be canceled after scrolling more than 3 pixels, or after clicking on the background. Clicking another 'focus' link while in a focus state will switch seamlessly to the new target element.
+The focus state will be canceled after scrolling away from the focused element, or after clicking on the background. Clicking another 'focus' link while in a focus state will switch seamlessly to the new target element.
 
 ##How?
 To use Focuser, just include `jquery.focuser.js on your page and make a link like this, with the targetId of the element you would liek to bring into focus:
