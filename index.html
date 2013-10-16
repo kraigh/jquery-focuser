@@ -52,7 +52,7 @@
           <div class="panel" id="what">
             <h2>What?</h2>
             <p>Focuser is a simple jquery plugin that lets you highlight a specific div (or any element, really) by fading the background around it. This works best when you are trying to highlight content on your page, and was designed to work with "panel" type elements, such as the ones on this page.</p>
-            <p>The focus state will be canceled after scrolling more than 3 pixels, or after clicking on the background. Clicking another 'focus' link while in a focus state will switch seamlessly to the new target element.</p>
+            <p>The focus state will be canceled after scrolling away from the focused element, or after clicking on the background. Clicking another 'focus' link while in a focus state will switch seamlessly to the new target element.</p>
             <button type="button" class="btn btn-link focus" data-focus-id="what">Focus on me!</button>
             <br>
             <button type="button" class="btn btn-link focus" data-focus-id="scrolling">I can also scroll!</button>
@@ -77,7 +77,7 @@
             <h2>How?</h2>
             <p>To use Focuser, just include <code>jquery.focuser.js</code> on your page and make a link like this:</p>
             <pre>&lt;a href="javascript:; class="focus" data-focus-id="targetId"&gt;Focus!&lt;/a&gt;</pre>
-            <p>You can even use a button:</p>
+            <p>You can also use a button:</p>
             <pre>&lt;button type="button" class="focus" data-focus-id="targetId"&gt;Focus!&lt;/button&gt;</pre>
             <p>The plugin can also be called via javascript. The <code>id</code> parameter is required, while <code>scroll</code> and <code>offset</code> are not.</p>
             <pre>focusOn(id, scroll, offset);</pre>
